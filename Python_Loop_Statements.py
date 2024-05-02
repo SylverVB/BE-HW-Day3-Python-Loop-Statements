@@ -31,7 +31,14 @@ moods = ["Happy", "Sad", "Energetic", "Calm"]
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 times = ["morning", "afternoon", "evening"]
 
-# Option 1. Mood and time of the day are random choices. The loop iterates over each day of the week and only one random time of the day.
+# Option 1.
+
+for i in range(len(days)):
+    for time in times:
+        print(f'On {days[i]} {time}, you were feeling {random.choice(moods)}')
+print("=======================================")
+
+# Option 2. Mood and time of the day are random choices. The loop iterates over each day of the week and only one random time of the day.
 
 for i in range(len(days)):
     for time in times:
@@ -42,7 +49,7 @@ for i in range(len(days)):
         break
 print("=======================================")
 
-# Option 2. Mood is the only random choice. The loop iterates over each day of the week and each time of the day.
+# Option 3. Mood is the only random choice. The loop iterates over each day of the week and each time of the day.
 
 for i in range(len(days)):
     for time in times:
